@@ -1,0 +1,16 @@
+# Build e CMake
+build/
+.cache/
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+Makefile
+
+# Compilati
+*.o
+*.out
+Tappa*
+
+# Dati scaricati dal template
+data.zip
+_deps/
