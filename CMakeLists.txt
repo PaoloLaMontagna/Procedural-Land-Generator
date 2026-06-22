@@ -145,7 +145,7 @@ set(T6 "Tappa06")
 
 add_executable(${T6} 
     Cartella-Tappa06/main.cc 
-    Cartella-Tappa06/dem.cc  # <-- Compiliamo il modulo del professore!
+    Cartella-Tappa06/dem.cc  
     ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
 )
 
@@ -158,6 +158,29 @@ target_link_libraries(${T6} PRIVATE
 )
 
 target_include_directories(${T6} PRIVATE 
+    ${imgui_SOURCE_DIR}  
+    ${imgui_SOURCE_DIR}/backends
+)
+# ==========================================
+# --- TAPPA 07: Biomi  ---
+# ==========================================
+set(T7 "Tappa07")
+
+add_executable(${T7} 
+    Cartella-Tappa07/main.cc 
+    Cartella-Tappa07/dem.cc
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_link_libraries(${T7} PRIVATE 
+    SFML::Window 
+    ImGui-SFML::ImGui-SFML 
+    OpenGL::GL 
+    glm::glm-header-only 
+    common
+)
+
+target_include_directories(${T7} PRIVATE 
     ${imgui_SOURCE_DIR}  
     ${imgui_SOURCE_DIR}/backends
 )
