@@ -124,9 +124,16 @@ target_link_libraries(${T3} PRIVATE SFML::Window ImGui-SFML::ImGui-SFML OpenGL::
 target_include_directories(${T3} PRIVATE ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
 
 # ==========================================
-# --- TAPPA 03: Normali   ---
+# --- TAPPA 04: Normali   ---
 # ==========================================
 set(T4 "Tappa04")
 add_executable(${T4} Cartella-Tappa04/main.cc ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp)
 target_link_libraries(${T4} PRIVATE SFML::Window ImGui-SFML::ImGui-SFML OpenGL::GL glm::glm-header-only common)
 target_include_directories(${T4} PRIVATE ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
+# ==========================================
+# --- TAPPA 05: Illuminazione   ---
+# ==========================================
+set(T5 "Tappa05")
+add_executable(${T5} Cartella-Tappa05/main.cc ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp)
+target_link_libraries(${T5} PRIVATE SFML::Window ImGui-SFML::ImGui-SFML OpenGL::GL glm::glm-header-only common)
+target_include_directories(${T5} PRIVATE ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
