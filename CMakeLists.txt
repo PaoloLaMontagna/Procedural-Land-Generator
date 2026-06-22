@@ -115,10 +115,18 @@ target_include_directories(${T2} PRIVATE
     ${imgui_SOURCE_DIR}/backends
 )
 
-# Nota metodologica per il futuro: Quando sarai pronto a creare la Tappa 03, 
-# ti basterà fare un copia-incolla del blocco qui sopra, cambiando T2 in T3 
-# e i puntamenti a Cartella-Tappa03.
+# ==========================================
+# --- TAPPA 03: Generazione Terreno (WASD)   ---
+# ==========================================
 set(T3 "Tappa03")
 add_executable(${T3} Cartella-Tappa03/main.cc ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp)
 target_link_libraries(${T3} PRIVATE SFML::Window ImGui-SFML::ImGui-SFML OpenGL::GL glm::glm-header-only common)
 target_include_directories(${T3} PRIVATE ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
+
+# ==========================================
+# --- TAPPA 03: Normali   ---
+# ==========================================
+set(T4 "Tappa04")
+add_executable(${T4} Cartella-Tappa04/main.cc ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp)
+target_link_libraries(${T4} PRIVATE SFML::Window ImGui-SFML::ImGui-SFML OpenGL::GL glm::glm-header-only common)
+target_include_directories(${T4} PRIVATE ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
