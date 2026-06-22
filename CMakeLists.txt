@@ -137,3 +137,27 @@ set(T5 "Tappa05")
 add_executable(${T5} Cartella-Tappa05/main.cc ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp)
 target_link_libraries(${T5} PRIVATE SFML::Window ImGui-SFML::ImGui-SFML OpenGL::GL glm::glm-header-only common)
 target_include_directories(${T5} PRIVATE ${imgui_SOURCE_DIR} ${imgui_SOURCE_DIR}/backends)
+
+# ==========================================
+# --- TAPPA 06: Ghiacciaio Reale (DEM)   ---
+# ==========================================
+set(T6 "Tappa06")
+
+add_executable(${T6} 
+    Cartella-Tappa06/main.cc 
+    Cartella-Tappa06/dem.cc  # <-- Compiliamo il modulo del professore!
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_link_libraries(${T6} PRIVATE 
+    SFML::Window 
+    ImGui-SFML::ImGui-SFML 
+    OpenGL::GL 
+    glm::glm-header-only 
+    common
+)
+
+target_include_directories(${T6} PRIVATE 
+    ${imgui_SOURCE_DIR}  
+    ${imgui_SOURCE_DIR}/backends
+)
