@@ -230,3 +230,26 @@ target_include_directories(${T9} PRIVATE
     ${imgui_SOURCE_DIR}  
     ${imgui_SOURCE_DIR}/backends
 )
+# ==========================================
+# --- TAPPA 010: Skybox  ---
+# ==========================================
+set(T10 "Tappa10")
+
+add_executable(${T10} 
+    Cartella-Tappa10/main.cc 
+    Cartella-Tappa10/dem.cc
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_link_libraries(${T10} PRIVATE 
+    SFML::Window 
+    ImGui-SFML::ImGui-SFML 
+    OpenGL::GL 
+    glm::glm-header-only 
+    common
+)
+
+target_include_directories(${T10} PRIVATE 
+    ${imgui_SOURCE_DIR}  
+    ${imgui_SOURCE_DIR}/backends
+)
