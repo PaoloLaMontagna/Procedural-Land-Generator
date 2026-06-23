@@ -184,3 +184,26 @@ target_include_directories(${T7} PRIVATE
     ${imgui_SOURCE_DIR}  
     ${imgui_SOURCE_DIR}/backends
 )
+# ==========================================
+# --- TAPPA 08: Texture  ---
+# ==========================================
+set(T8 "Tappa08")
+
+add_executable(${T8} 
+    Cartella-Tappa08/main.cc 
+    Cartella-Tappa08/dem.cc
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_link_libraries(${T8} PRIVATE 
+    SFML::Window 
+    ImGui-SFML::ImGui-SFML 
+    OpenGL::GL 
+    glm::glm-header-only 
+    common
+)
+
+target_include_directories(${T8} PRIVATE 
+    ${imgui_SOURCE_DIR}  
+    ${imgui_SOURCE_DIR}/backends
+)
