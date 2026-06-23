@@ -207,3 +207,26 @@ target_include_directories(${T8} PRIVATE
     ${imgui_SOURCE_DIR}  
     ${imgui_SOURCE_DIR}/backends
 )
+# ==========================================
+# --- TAPPA 09: Acqua Animata  ---
+# ==========================================
+set(T9 "Tappa09")
+
+add_executable(${T9} 
+    Cartella-Tappa09/main.cc 
+    Cartella-Tappa09/dem.cc
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_link_libraries(${T9} PRIVATE 
+    SFML::Window 
+    ImGui-SFML::ImGui-SFML 
+    OpenGL::GL 
+    glm::glm-header-only 
+    common
+)
+
+target_include_directories(${T9} PRIVATE 
+    ${imgui_SOURCE_DIR}  
+    ${imgui_SOURCE_DIR}/backends
+)
