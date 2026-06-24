@@ -34,7 +34,6 @@ cmake -B build -D CMAKE_BUILD_TYPE=Release
 cmake --build build
 
 //Esecuzione:
-```bash
 cd Cartella-TappaN
 ../build/TappaN
 
