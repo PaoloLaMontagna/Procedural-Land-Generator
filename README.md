@@ -11,22 +11,6 @@ Il progetto fa uso delle seguenti librerie:
 * **GLAD** (OpenGL Loader)
 
 ---
-
-##  Compilazione ed Esecuzione
-
-
-
-**1. Compilazione:**
-Dal terminale, nella cartella radice del progetto, eseguire:
-```bash
-cmake -B build -D CMAKE_BUILD_TYPE=Release
-cmake --build build
-
-**2. Esecuzione:**
-```bash
-cd Cartella-TappaN
-../build/TappaN
-
 ## Tappe
 **1. Matrice**
 **2. Movimento:**
@@ -38,4 +22,20 @@ cd Cartella-TappaN
 **8. Texture:**
 **9. Acqua Animata:**
 **10. Skybox:**
+
+##  Compilazione ed Esecuzione
+
+
+
+**1. Compilazione:**
+Dal terminale, nella cartella radice del progetto, eseguire:
+```bash
+cmake -B build -D CMAKE_BUILD_TYPE=Release
+cmake --build build
+
+//Esecuzione:
+```bash
+cd Cartella-TappaN
+../build/TappaN
+
 
