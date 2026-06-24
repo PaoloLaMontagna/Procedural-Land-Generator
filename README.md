@@ -12,16 +12,16 @@ Il progetto fa uso delle seguenti librerie:
 
 ---
 ## Tappe
-**1. Matrice**
-**2. Movimento:**
-**3. Perlin Noise:**
-**4. Calcolo normali:**
-**5. Luce:**
-**6. DEM:**
-**7. Biomi:**
-**8. Texture:**
-**9. Acqua Animata:**
-**10. Skybox:**
+* **1. Matrice**
+* **2. Movimento**
+* **3. Perlin Noise**
+* **4. Calcolo normali**
+* **5. Luce**
+* **6. DEM**
+* **7. Biomi**
+* **8. Texture**
+* **9. Acqua Animata**
+* **10. Skybox**
 
 ##  Compilazione ed Esecuzione
 
