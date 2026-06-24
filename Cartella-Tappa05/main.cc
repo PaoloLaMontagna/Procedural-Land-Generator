@@ -329,8 +329,7 @@ int main() {
         glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // --- INVIA I DATI DELLA LUCE ALLA SCHEDA VIDEO ---
-        // Il vettore direzione del sole deve essere capovolto se usato nello shader per indicare "da dove viene la luce"
-        // Qui lo passiamo direttamente. Nello shader verrà normalizzato.
+        // Il vettore direzione del sole deve essere capovolto se usato nello shader per indicare da dove viene la luce
         glUniform3f(lightDir_loc, sun_dir.x, sun_dir.y, sun_dir.z);
         glUniform3f(lightColor_loc, sun_color.x, sun_color.y, sun_color.z);
         glUniform3f(objectColor_loc, terrain_color.x, terrain_color.y, terrain_color.z);

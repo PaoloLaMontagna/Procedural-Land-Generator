@@ -182,7 +182,7 @@ public:
     }
 
     void draw () {
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         glDrawElements(GL_TRIANGLES, indices.size (), GL_UNSIGNED_INT, 0);
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     }

@@ -222,7 +222,7 @@ int main() {
 
     sf::Window window(
         sf::VideoMode({window_width, window_height}),
-        "Generatore Procedurale - Tappa 05",
+        "Generatore Procedurale - Tappa 06",
         sf::Style::Default,
         sf::State::Windowed,
         settings
@@ -237,7 +237,7 @@ int main() {
     if (!ImGui::SFML::Init(window, {(float) window_width, (float) window_height})) return 1;
     ImGui_ImplOpenGL3_Init("#version 410 core");
 
-    // CARICAMENTO SHADER TAPPA 05
+    // CARICAMENTO SHADER TAPPA 06
     Shaders shaders ("02_vertex.vert", "02_fragment.frag");
     shaders.use ();
     
@@ -292,7 +292,7 @@ int main() {
         static float frequency = 0.05f;
         static float amplitude = 10.0f;
         static unsigned int current_seed = 12345;
-        static bool use_dem = false; // <--- NUOVA VARIABILE
+        static bool use_dem = false; 
         
         bool changed = false;
 
@@ -327,7 +327,7 @@ int main() {
 
         ImGui::Separator();
         
-        // Sezione 2: Illuminazione
+        //Illuminazione
         ImGui::TextColored(ImVec4(0.8f, 0.8f, 0.2f, 1.0f), "ILLUMINAZIONE (SOLE)");
         static glm::vec3 sun_dir = glm::vec3(0.5f, 1.0f, 0.3f);
         static glm::vec3 sun_color = glm::vec3(1.0f, 0.95f, 0.8f);
@@ -353,8 +353,6 @@ int main() {
         glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // --- INVIA I DATI DELLA LUCE ALLA SCHEDA VIDEO ---
-        // Il vettore direzione del sole deve essere capovolto se usato nello shader per indicare "da dove viene la luce"
-        // Qui lo passiamo direttamente. Nello shader verrà normalizzato.
         glUniform3f(lightDir_loc, sun_dir.x, sun_dir.y, sun_dir.z);
         glUniform3f(lightColor_loc, sun_color.x, sun_color.y, sun_color.z);
         glUniform3f(objectColor_loc, terrain_color.x, terrain_color.y, terrain_color.z);

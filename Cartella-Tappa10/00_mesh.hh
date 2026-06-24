@@ -127,7 +127,7 @@ public:
             }
         }
 
-        // Calcoliamo le luci su qualunque tipo di terreno abbiamo generato!
+        // Calcoliamo le luci su qualunque tipo di terreno abbiamo generato
         calculate_normals();
     }
 
@@ -160,7 +160,7 @@ public:
             points.push_back(vertices[i].x); points.push_back(vertices[i].y); points.push_back(vertices[i].z);
             points.push_back(normals[i].x);  points.push_back(normals[i].y);  points.push_back(normals[i].z);
             
-            // Impacchettiamo anche le coordinate U e V! (Ora un vertice pesa 8 float, non più 6)
+            // Impacchettiamo anche le coordinate U e V
             points.push_back(uvs[i].x);      points.push_back(uvs[i].y);
         }
         indices.clear();

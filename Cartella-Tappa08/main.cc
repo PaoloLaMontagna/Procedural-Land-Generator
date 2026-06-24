@@ -20,7 +20,7 @@
 #include "00_mesh.hh"
 #include "dem.hh"
 
-// Funzione super comoda per caricare le immagini .jpg e .png
+// Funzione per caricare le immagini
 GLuint loadTexture(const std::string& path) {
     sf::Image img;
     if (!img.loadFromFile(path)) {
@@ -263,11 +263,11 @@ int main() {
     GLint hSnow_loc = glGetUniformLocation(shaders.program, "hSnow");
 
     // 4. CARICAMENTO TEXTURE
-    GLuint texWater = loadTexture("./texture/water.png");
-    GLuint texSand  = loadTexture("./texture/sand.png");
-    GLuint texGrass = loadTexture("./texture/grass.png");
-    GLuint texRock  = loadTexture("./texture/rock.png");
-    GLuint texSnow  = loadTexture("./texture/snow.png");
+    GLuint texWater = loadTexture("../texture/water.png");
+    GLuint texSand  = loadTexture("../texture/sand.png");
+    GLuint texGrass = loadTexture("../texture/grass.png");
+    GLuint texRock  = loadTexture("../texture/rock.png");
+    GLuint texSnow  = loadTexture("../texture/snow.png");
 
     glUniform1i(glGetUniformLocation(shaders.program, "texWater"), 0);
     glUniform1i(glGetUniformLocation(shaders.program, "texSand"),  1);
